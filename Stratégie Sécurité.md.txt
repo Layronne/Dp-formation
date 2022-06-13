@@ -1,0 +1,101 @@
+﻿Stratégie Sécurité
+
+
+
+
+
+
+INTRODUCTION
+
+
+CustomKey est une plateforme de E-commerce, ou l’utilisateur pourra créer un clavier personnel et personnalisé en ayant aucune connaissance dans le domaine. Celui-ci pourra sélectionner pièce par pièce les composants de son clavier afin d’avoir une expérience unique.
+
+
+Étant une plateforme de E-commerce, celle-ci contiendra des données d’utilisateur sensible en plus de faire circuler de l’argent, celle-ci se doit d’avoir une sécurité irréprochable afin de contenir toutes attaques malveillantes. Ces attaques peuvent entraîner un certain nombre de préjudices moral, juridique et réputationnel beaucoup trop important pour être ignoré.
+
+
+Il est tout aussi important de se concentrer sur un défense en profondeur afin de se prémunir de toute éventualité d’attaque. Suite au recommandation de l’ANSSI( Agence nationale de la sécurité des systèmes d’information), il est recommandé de ne pas concentrer sa défense uniquement à un endroit, comme le point d'entrée car si celui-ci est percé, nous n’avons plus aucune protection. Il est davantage voulu de défendre tous nos endroits tel que notre base de donnée, notre point d'entrée ou bien même notre API.
+
+
+Afin de sécuriser plus facilement notre plateforme, il est préférable d'appliquer la stratégie du moindre privilège. Ce concept de sécurité a pour but de n’accorder à un utilisateur le niveau d’accès (ou les permissions) minimum requis pour accomplir son travail. Cependant ce concept ne s’applique pas forcément à un utilisateur mais aussi aux applications, aux systèmes connectés qui requièrent des privilèges ou des permissions afin d’effectuer une tâche requise. Ce principe est important pour 4 raisons : 
+* Il réduit la surface exposée aux cyberattaques. Aujourd’hui, la plupart des attaques s’appuient sur l’exploitation des identifiants à privilèges. En limitant les privilèges de superutilisateur et d’administrateur (qui fournissent aux administrateurs informatiques un accès illimité aux systèmes cibles), l’application du moindre privilège permet de réduire la surface d’attaque globale.
+* Il stoppe la propagation de logiciels malveillants (malware). En appliquant le moindre privilège sur les terminaux, les attaques de logiciels malveillants (comme les attaques par injection SQL) sont incapables d’utiliser des privilèges élevés pour accroître leur accès afin de se déplacer latéralement pour installer ou exécuter des programmes ou endommager la machine.
+* Il améliore la productivité des utilisateurs. La suppression de droits d’administrateur local chez les utilisateurs métier permet de réduire le risque, tandis que la mise en place de l’élévation de privilèges « juste à temps », basée sur une politique, préserve la productivité des utilisateurs en évitant de trop solliciter l’assistance informatique.
+* Il rationalise la conformité et les audits. De nombreuses politiques internes et exigences réglementaires requièrent que les organisations implémentent le principe du moindre privilège sur les comptes à privilèges afin d’éviter toute dégradation des systèmes critiques, intentionnelle ou non. L’application du moindre privilège aide les organisations à prouver leur conformité en fournissant un journal d’audit complet des activités à privilèges.
+SÉCURISATION D’API
+Les fuites de données les plus importantes sont dues à des API défaillantes, vulnérables ou piratées, car celles-ci peuvent révéler au grand public des données financières et personnelles sensibles. Cependant, toutes les données ne se valent pas et ne nécessitent pas le même niveau de protection. Il est donc d’ordre public que notre stratégie de sécurisation des API doit dépendre du type de données transférées.
+Afin de protéger au mieux nos APIs, nous avons besoin d’un environnement fiable qui applique des politiques d’authentification et d’autorisation.
+Nous utiliserons donc plusieur méthodes:
+
+
+* Utilisation des tokens : nous attribuons des jetons utilisateur afin d'accéder au services, sans ce jeton l’utilisateur n’a pas accès. Ce jeton a un temps d’expiration.
+
+
+* Utilisation du chiffrement et signatures : nous allons chiffrer nos données à l'aide d’un protocole. Seuls les utilisateurs autorisés peuvent déchiffrer et modifier lesdites données.
+
+
+* Un typage très strict des donnés : se typage strict nous permettra de ne jamais avoir de mauvaise surprise lorsqu’on attend une certaine donnée .
+
+
+
+
+
+
+
+
+
+
+FRONT-END
+
+
+Le front-end est une partie assez délicate de la sécurisation car celui-ci s’exécute sur le périphérique de l’utilisateur et ne peut donc pas être sécurisé. On doit même le considérer comme un client potentiellement malveillant.
+Cependant il existe quand même quelque parties à sécuriser comme la validation d’un formulaire pour se prémunir de certaines attaques tel que les failles XSS. Cette faille permet d’injecter du code directement dans une page par l’URL. Elle est utilisée dans l’optique de capturer les cookies d’identification des utilisateurs sur un site Internet.
+Pour se protéger de telles attaques nous utiliserons un protocole TLS, celui-ci agit en veillant à ce que les données transférées entre les utilisateurs et les sites, ou entre les deux systèmes restent impossibles à lire.
+
+
+
+
+
+
+
+
+AUTHENTIFICATION
+
+
+Lorsqu'un utilisateur veut accéder à un système, celui-ci doit dans un premier temps effectuer une procédure d’identification et d'authentification.
+L’identification est une phase qui consiste à établir l’identité de l’utilisateur. L’utilisateur utilise un identifiant qui l’identifie et qui lui est attribué individuellement. Cet identifiant est unique.
+L’authentification est une phase qui permet à l’utilisateur d’apporter la preuve de son identité. Elle intervient après la phase d’identification. L’utilisateur utilise un authentifiant qui est le password et connue que par lui.
+Pour que ce mot de passe ne soit pas découvert ou bien même déduit, nous mettons en place une politique de sécurité pour obliger l’utilisateur à avoir un mot de passe peu facile à trouver.
+Une politique de mot de passe consiste en une série de mesures mises en place par une entreprise pour renforcer la sécurité de l’accès aux données et aux outils dont elle dispose, à travers la création et l’utilisation de mots de passe complexes. Elle doit être adaptée en fonction du contexte et des objectifs de sécurité du système d’information de l’organisation.
+Bien organiser et cadrer l’authentification des utilisateurs représente un facteur essentiel pour garantir la sécurité des traitements des données personnelles, dans le cadre de l’application des articles 5 et 32 du RGPD, comme le rappelle l’agence nationale de la sécurité des systèmes d’information (ANSSI) dans son guide de recommandations relatives à l’authentification multifacteur et aux mots de passe.
+Si l’efficacité d’un mot de passe est souvent réduite à sa « force », une politique efficace en la matière doit définir une série d’éléments indispensables, tels que :
+* La longueur des mots de passe,
+* La complexité des mots de passe,
+* Le délai d’expiration des mots de passe,
+* Les mécanismes de contrôle de leur robustesse et la limitation d’essais d’authentification,
+* La méthode de conservation des mots de passe et la gestion de l’historique des événements liés à l’authentification,
+* La règle pour retrouver ses accès en cas de perte ou de vol de mot de passe,
+* L’utilisation d’un coffre-fort de mots de passe.
+
+
+
+
+BASE DE DONNÉE
+La sécurisation de la base de données est un des éléments les plus essentiels de notre stratégie de sécurité, c’est elle qui contient l’ensemble des données sensibles que nous ne voulons pas divulguer. Notre stratégie se basera donc en 4 grand point :
+* Contrôles d'administration et d'accès au réseau : Le nombre d'utilisateurs ayant accès à la base de données doit être limité au minimum pratique. Leurs droits doivent être limités au strict minimum nécessaire leur permettant d'effectuer leur mission. De même, l'accès au réseau doit être limité au niveau minimum d'autorisations nécessaires.
+
+
+* Sécurité des comptes/des appareils des utilisateurs finaux : Nous devons toujours savoir qui accède à la base de données, et quand et comment les données sont utilisées. Les solutions de surveillance des données peuvent nous avertir si certaines activités sur les données sont inhabituelles ou semblent risquées. Tous les appareils utilisateur qui se connectent au réseau hébergeant la base de données doivent être sécurisés physiquement (c'est-à-dire être détenus uniquement par l'utilisateur autorisé) et pouvoir être soumis à des contrôles de sécurité à tout moment.
+
+
+* Chiffrement : TOUTES les données, y compris les données de la base de données et les données d'identification, doivent être protégées par un chiffrement optimal, qu'elles soient au repos ou en transit. Nous gererons toutes les clés de chiffrement avec les meilleures pratiques possibles (HASHAGE, SALAGE).
+
+
+* Sécurité des sauvegardes : Toutes les sauvegardes, copies ou images de la base de données doivent être soumises aux mêmes contrôles de sécurité (ou à des contrôles équivalents en termes de rigueur) que la base de données elle-même.
+Même avec les plus grande précautions possible la plus grande menace reste l’erreur Humaine, Les accidents, les mots de passe faibles, le partage de mots de passe et d'autres comportements imprudents ou résultant d'une mauvaise information continuent d'être la cause de près de la moitié de toutes les violations de données déclarées.
+
+
+JOURNALISATION
+
+
+La journalisation des instructions de base peut être fournie par la fonction de journalisation standard avec log_statement = all. Ceci est acceptable pour la surveillance et d'autres utilisations, mais ne fournit pas le niveau de détail généralement requis pour un audit. Il ne suffit pas d'avoir une liste de toutes les opérations effectuées sur la base de données. Il doit également être possible de trouver des déclarations particulières qui intéressent un auditeur. La fonction de journalisation standard montre ce que l'utilisateur a demandé, tandis que pgAudit se concentre sur les détails de ce qui s'est passé pendant que la base de données satisfaisait la demande.
