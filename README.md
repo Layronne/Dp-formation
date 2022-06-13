@@ -2,7 +2,7 @@
 1. Sommaire
 2. Introduction 
 3. L’entreprise
-       3.1 L’histoire derrière la marque
+       - L’histoire derrière la marque
        3.2 Le projet
       3.3 L’open source
 4. Gestion de projet
