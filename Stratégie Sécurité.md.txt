@@ -8,9 +8,6 @@
 INTRODUCTION
 
 
-CustomKey est une plateforme de E-commerce, ou l’utilisateur pourra créer un clavier personnel et personnalisé en ayant aucune connaissance dans le domaine. Celui-ci pourra sélectionner pièce par pièce les composants de son clavier afin d’avoir une expérience unique.
-
-
 Étant une plateforme de E-commerce, celle-ci contiendra des données d’utilisateur sensible en plus de faire circuler de l’argent, celle-ci se doit d’avoir une sécurité irréprochable afin de contenir toutes attaques malveillantes. Ces attaques peuvent entraîner un certain nombre de préjudices moral, juridique et réputationnel beaucoup trop important pour être ignoré.
 
 
