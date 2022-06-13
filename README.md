@@ -1,5 +1,4 @@
-# Dp-formation
-# Dp-formation
+
 1. Sommaire
 2. Introduction 
 3. L’entreprise
