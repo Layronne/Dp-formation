@@ -48,7 +48,7 @@ Une fois l'ordonnancement des taches termine, l'ordre dans lequel elles doivent 
 
 Cette planification des taches va nous permettre de degager 4 Epic :
 
-    - Etude préalable : il s’agit de déterminer le périmètre exact du projet (la « gestion du personnel » est une notion très vaste, l’application devra-t-elle comprendre la gestion des        présences, des congés, des absences, de la paie… ?) et de rédiger un cahier des charges.
+    - Etude préalable : il s’agit de déterminer le périmètre exact du projet et de comprendre la demande du client.
     - Conception : cette phase correspond à la conception technique de la solution. Des choix qui sont faits à ce stade dépend l’estimation de la durée de réalisation des différentes tâches identifiées.
     - Réalisation : développement de l’application.
     - Tests : tests unitaires, techniques et fonctionnels de l’application.
