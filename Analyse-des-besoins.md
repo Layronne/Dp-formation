@@ -2,23 +2,16 @@
 ---
 # Besoin fonctionnel
 
-Le but d'un projet est de satisfaire une besoin. Il faut l'exprimer clairement avant d'imposer une solution.
-Generalement formule sous formes d'exigences fonctionnelles, les besoins fonctionnels sont l'expression de ce que le produit ou le service delivre par le projet devrait etre ou faire. Les besoin fonctionnels sont specifies par les representants des utilisateurs et des beneficiaire du produit/service delivre par le projet. ils se declinent sur les 3 axes suivants:
-    
-    - fonction cibles (fonctionnalites, prestations): description des services rendus et des prestations offertes par le produit du projet
-    - processus cibles: description des processus cibles impactes par le projet. Il s'agite d'expliciter dans la situation future chaque activite, le qui , le quoi, le comment
-    - structure cible: description de l'organisation des differents acteurs a l'issue du projet decrire l'organisation cible qui sera en place a l'issue du projet
 
+ Keystoms est une plateforme de e-commerce, le site devra offrir au client la possibilite d'acheter des pieces detache de clavier d'ordinateur de tout type (case, PCB, plate, switch, keycaps, accessoire en tout genre). Cepandant ce n'est pas tout, celui-ci devra aussi proposer un systeme de "configurator", le client pourra selectionner les differents type de pieces d'un clavier afin d'en "construire" virtuellement un. Une fois celui-ci construit il pourra se le commander et il recevra le meme en "plug and play", c'est a dire qu'il sera pret a l'emploi. En plus de ces deux fonctionnalite le client aurra acces a une panel de possibilite, comme acceder a different guide ou bien pouvoir me contacter afin de resoudre des probleme de service apres-vente etc...
 
-pour Keystoms:
-
-- fonction cible
-    Keystoms est une plateforme de e-commerce, le site devra offrir au client la possibilite d'acheter des pieces detache de clavier d'ordinateur de tout type (case, PCB, plate, switch, keycaps, accessoire en tout genre). Cepandant ce n'est pas tout, celui-ci devra aussi proposer un systeme de "configurator", le client pourra selectionner les differents type de pieces d'un clavier afin d'en "construire" virtuellement un. Une fois celui-ci construit il pourra se le commander et il recevra le meme en "plug and play", c'est a dire qu'il sera pret a l'emploi. En plus de ces deux fonctionnalite le client aurra acces a une panel de possibilite, comme acceder a different guide ou bien pouvoir me contacter afin de resoudre des probleme de service apres-vente etc...
-
-- processus cibles
-    
 
 
 
 
 # Preconnisation technique
+
+Apres avoir annalyse les besoins du client, je preconise donc d'utiliser du JavaScript, celui-ci nous permettra de traiter du front, de faire une API.
+Pour creer cette API nous allons utiliser NestJS qui est un environnement de travaille securise, ainsi que pug pour travailler en templating a travers nestJS, nous aurrions pu travailler avec un framework front-end tel que ReactJs ou VueJS mais ayant besoin de referencement pour rester competitif envers la concurrence nous nous sommes decide de ne pas utiliser ces framework.
+Pour travailler au mieux en equipe nous utiliserons le systeme de versionning git et son workflow Gitflow en travaillant en systeme de feature.
+Cepandant nous avons fait un grand nombre de commit sans jamais respecter de template d'appelation, a l'avenir je souhaite utiliser un template angular pour organiser au mieux mes differents commits
