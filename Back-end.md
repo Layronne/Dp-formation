@@ -43,6 +43,8 @@ Cest trois digrammes couvre l'ensemble de nos besoin lors de la conception de l'
 
 # Base de donnee
 
+## Conception
+
 La sécurisation de la base de données est un des éléments les plus essentiels de notre stratégie de sécurité, c’est elle qui contient l’ensemble des données sensibles que nous ne voulons pas divulguer. Notre stratégie se basera donc en 4 grand point :
 * Contrôles d'administration et d'accès au réseau : Le nombre d'utilisateurs ayant accès à la base de données doit être limité au minimum pratique. Leurs droits doivent être limités au strict minimum nécessaire leur permettant d'effectuer leur mission. De même, l'accès au réseau doit être limité au niveau minimum d'autorisations nécessaires.
 
@@ -55,3 +57,11 @@ La sécurisation de la base de données est un des éléments les plus essentiel
 
 * Sécurité des sauvegardes : Toutes les sauvegardes, copies ou images de la base de données doivent être soumises aux mêmes contrôles de sécurité (ou à des contrôles équivalents en termes de rigueur) que la base de données elle-même.
 Même avec les plus grande précautions possible la plus grande menace reste l’erreur Humaine, Les accidents, les mots de passe faibles, le partage de mots de passe et d'autres comportements imprudents ou résultant d'une mauvaise information continuent d'être la cause de près de la moitié de toutes les violations de données déclarées.
+
+La premiere etape dans la conception a ete de choisir entre une base de donnee relationnelle et une base de donnee non relationnelle
+
+
+La principale différence entre les bases de données relationnelles et non relationnelles réside dans le fait que la base de données relationnelle stocke les données dans des tables, tandis que la base de données non relationnelle stocke les données au format clé-valeur, dans des documents ou par une autre méthode sans utiliser de tables comme une base de données relationnelle. Les bases de données relationnelles aident à réaliser des requêtes complexes. De plus, ils offrent une flexibilité et aident à analyser les données. Les bases de données non relationnelles fonctionnent bien avec une grande quantité de données. En outre, ils réduisent la latence et améliorent le débit. C’est donc une autre différence entre les bases de données relationnelles et non relationnelles.
+
+Dans notre projet nous n'allons pas manipuler une grand quantite de donnee il a donc ete logique pour nous de choisir une base de donnee relationnelle.
+Afin de realiser le schema de notre base de donnee, nous somme parti sur le standart MERISE qui semble etre tout a fait adapte a nos besoins, de plus MERISE est un standart tres utilise en france, qui en fait un avantage pour la comprehension du projet par des paires. L'UML reste tout de meme une tres bonne alternative pour une conception de base de donnee. Lors de la realisation de mon MCD(modele conceptuel des donnees), j'estime ne pas avoir cerner les concept inerant a MERISE et je trouve que mon schema ne correspond en rien a MCD et se rapproche plus d'un MLD(modele logique de donnees), nous avons neanmoins garde ce schema. Si c'etait a refaire je resterai en MERISE mais tout a d'abord je n'utiliserai pas du tout gitmind pour realiser mon schema mais looping, qui est un logiciel developpe dans le but de realiser des Schema en MERISE. Une fois un MCD realise celui-ci convertie notre Schema en MLD et il reste un tres court travail a realiser pour le MPD(Modele Physique des Donnees).
